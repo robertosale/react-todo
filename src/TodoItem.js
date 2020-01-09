@@ -6,7 +6,7 @@ class TodoItem extends Component {
     state = {  }
     render() { 
         return (
-            <p>Item</p>
+            <p>{this.props.task}</p>
           );
     }
 }

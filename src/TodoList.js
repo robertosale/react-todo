@@ -3,13 +3,22 @@ import TodoItem from './TodoItem';
 
 
 class TodoList extends Component {
-    state = {  }
+    state = {
+        tasks: ['ir de compras','hacer dieta']
+      }
     render() { 
+        const {task} = this.state.tasks;
         return (
             <div>
-                <TodoItem />
-                <TodoItem />
-                <TodoItem />
+                {
+
+                    this.state.tasks.map(
+                        task => {
+                            return <TodoItem task={task}/>
+                        }
+                    )
+
+                }
 
 
 
